@@ -10,9 +10,86 @@
     <link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
-    
+    <div class="container-fluid">
+        <div class="container">
+
+            <div class="row center_divs">
+                    <div class="col-md-2 one concealedPenguinSoldier"><h4>Hmmm...</h4></div>
+                    <div class="col-md-2 col-md-push-4 two concealedPenguinSoldier"><h4>These</h4></div>
+                    <div class="col-md-2 col-md-push-4 two concealedPenguinSoldier"><h4>are</h4></div> 
+                    <div class="col-md-2 col-md-push-4 two concealedPenguinSoldier"><h4>strange...</h4></div>   
+            </div>
+                    
+            <div class="row">
+                <div class="col-md-12 three concealedPenguinSoldier" id="bigBox">
+                    <h3>They don't want you to know the truth. What are they hiding under these blacked-out boxes?</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 four concealedPenguinSoldier">
+                    <h4>Potential Secrets:</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 five concealedPenguinSoldier">
+                    <h3>Government secrets?</h3>
+                </div>
+                <div class="col-md-3 six concealedPenguinSoldier">
+                    <h3>Conspiracies?</h3>
+                </div>
+                <div class="col-md-3 six concealedPenguinSoldier">
+                    <h3>Secret Societies?</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 five concealedPenguinSoldier">
+                    <h3>Map to hidden treasure???</h3>
+                </div>
+                <div class="col-md-3 six concealedPenguinSoldier">
+                    <h3>The Lost City of Atlantis?</h3>
+                </div>
+                <div class="col-md-3 six concealedPenguinSoldier" id="revealTheTruth">
+                    <h3>Click this box to reveal the truth...</h3>
+                    <br>
+                    <h3>If you're brave enough...</h3>
+                </div>
+            </div>
+            
+        </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+
+        const revealButton = document.getElementById('revealTheTruth');
+        const bigBox = document.getElementById('bigBox');
+        const penguinArmyHasBeenUnleashed = false;
+
+        revealButton.addEventListener('click', () => {
+            if(!penguinArmyHasBeenUnleashed) {
+                penguinArmyHasBeenUnleashed = true;
+                unleashThePenguinArmyUponTheWorld();
+            }
+        });
+
+        function unleashThePenguinArmyUponTheWorld() {
+            document.querySelectorAll('.concealedPenguinSoldier').forEach((penguin) => {
+                penguin.style.backgroundColor = 'transparent';
+                penguin.innerText = '';
+                penguin.style.backgroundImage = "url('penguin.jpg')";
+                penguin.style.backgroundAttachment = 'fixed';
+                penguin.style.backgroundPosition = 'center';
+                penguin.style.backgroundRepeat = 'no-repeat';
+                penguin.style.backgroundSize = 'cover';
+                bigBox.innerHTML = "<h1>It was the penguin army!</h1>";
+            });
+        }
+
+    </script>
 </body>
 </html>

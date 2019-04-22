@@ -2,10 +2,61 @@
 
 body {
     font-family: 'Kaushan Script', cursive;
-
+    margin: 32px;
+    color: white;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    
-    font-family: 'Playball', cursive;
+.col-md-2, .col-md-12, .col-md-3, .col-md-6 {
+    margin: 24px;
+    background-color: #000;
+}
+
+.center_divs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+h1 {
+    background-color: #000;
+}
+
+.col-md-2 {
+    width: calc(16.6667% - 48px);
+}
+
+.col-md-12 {
+    width: calc(100% - 48px);
+}
+
+.col-md-3 {
+    width: calc(25% - 48px);
+}
+
+.col-md-6 {
+    width: calc(50% - 48px);
+}
+
+.one {
+    height: 6em;
+}
+
+.two {
+    height: 2em;
+}
+.three {
+    height: 36em;
+    margin-bottom: 48px;
+}
+
+.four {
+    height: 2em;
+}
+
+.five {
+    height: 16em;
+}
+
+.six {
+    height: 16em;
 }
